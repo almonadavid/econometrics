@@ -1,0 +1,233 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\almon\OneDrive\Desktop\ECO 390\Project Proposal\Log File.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Nov 2024, 18:16:29
+
+{com}. destring numathletes, replace
+{txt}numathletes: all characters numeric; {res}replaced {txt}as {res}int
+{txt}(1 missing value generated)
+{res}
+{com}. sum
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 5}Country {c |}{res}          0
+{txt}{space 8}Year {c |}{res}        716    2015.006    5.915486       2008       2024
+{txt}{space 2}medalcount {c |}{res}        716    5.296089    14.28468          0        126
+{txt}{space 6}gnippp {c |}{res}        716    16719.94    19096.43        460     152930
+{txt}{space 6}gdpppp {c |}{res}        716    17204.08    20012.32   474.0153   163542.8
+{txt}{hline 13}{c +}{hline 57}
+{space 2}population {c |}{res}        716    38.06982    141.5762    .009791     1411.1
+{txt}{space 3}urbpoppct {c |}{res}        716    55.98212    22.90374      9.139        100
+{txt}healthexpe~p {c |}{res}        716     1173.38    1547.988   20.54935   11758.42
+{txt}{space 5}hostnow {c |}{res}        716    .0055866    .0745865          0          1
+{txt}{space 2}hostinfour {c |}{res}        716    .0055866    .0745865          0          1
+{txt}{hline 13}{c +}{hline 57}
+hostlastfour {c |}{res}        716    .0055866    .0745865          0          1
+{txt}{space 3}timeshost {c |}{res}        716    .1424581    .4982056          0          4
+{txt}{space 3}failedbid {c |}{res}        716    .1815642    .6306802          0          5
+{txt}{space 1}numathletes {c |}{res}        716    58.21229    103.1498          1        619
+{txt}medallastf~r {c |}{res}        716    5.132682     13.9063          0        113
+{txt}{hline 13}{c +}{hline 57}
+{space 8}asia {c |}{res}        716    .2458101    .4308674          0          1
+{txt}{space 6}africa {c |}{res}        716    .2765363    .4475978          0          1
+{txt}northamerica {c |}{res}        716     .122905    .3285577          0          1
+{txt}{space 6}europe {c |}{res}        716    .2150838    .4111677          0          1
+{txt}southamerica {c |}{res}        716    .0614525    .2403264          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 5}oceania {c |}{res}        716    .0782123    .2686931          0          1
+{txt}{space 3}govsystem {c |}{res}          0
+
+{com}. reg medalcount gnippp population urbpoppct healthexpendppp hostnow hostinfour hostlastfour timeshost failedbid numathletes medallastfour asia africa northamerica europe southamerica
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       716
+{txt}{hline 13}{c +}{hline 34}   F(16, 699)      = {res}  1076.13
+{txt}       Model {c |} {res} 140205.308        16  8762.83174   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 5691.92122       699  8.14294882   {txt}R-squared       ={res}    0.9610
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9601
+{txt}       Total {c |} {res} 145897.229       715  204.052069   {txt}Root MSE        =   {res} 2.8536
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     medalcount{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}gnippp {c |}{col 17}{res}{space 2}-.0000152{col 29}{space 2} .0000112{col 40}{space 1}   -1.35{col 49}{space 3}0.176{col 57}{space 4}-.0000372{col 70}{space 3} 6.83e-06
+{txt}{space 5}population {c |}{col 17}{res}{space 2} .0023382{col 29}{space 2}   .00096{col 40}{space 1}    2.44{col 49}{space 3}0.015{col 57}{space 4} .0004534{col 70}{space 3} .0042231
+{txt}{space 6}urbpoppct {c |}{col 17}{res}{space 2}-.0061237{col 29}{space 2}  .006622{col 40}{space 1}   -0.92{col 49}{space 3}0.355{col 57}{space 4}-.0191251{col 70}{space 3} .0068777
+{txt}healthexpendppp {c |}{col 17}{res}{space 2} .0004198{col 29}{space 2} .0001578{col 40}{space 1}    2.66{col 49}{space 3}0.008{col 57}{space 4} .0001099{col 70}{space 3} .0007296
+{txt}{space 8}hostnow {c |}{col 17}{res}{space 2} 20.22254{col 29}{space 2} 1.657479{col 40}{space 1}   12.20{col 49}{space 3}0.000{col 57}{space 4} 16.96831{col 70}{space 3} 23.47678
+{txt}{space 5}hostinfour {c |}{col 17}{res}{space 2} 9.405838{col 29}{space 2} 1.513194{col 40}{space 1}    6.22{col 49}{space 3}0.000{col 57}{space 4} 6.434889{col 70}{space 3} 12.37679
+{txt}{space 3}hostlastfour {c |}{col 17}{res}{space 2}-5.834023{col 29}{space 2} 1.527912{col 40}{space 1}   -3.82{col 49}{space 3}0.000{col 57}{space 4} -8.83387{col 70}{space 3}-2.834177
+{txt}{space 6}timeshost {c |}{col 17}{res}{space 2} 2.757301{col 29}{space 2} .4456818{col 40}{space 1}    6.19{col 49}{space 3}0.000{col 57}{space 4} 1.882266{col 70}{space 3} 3.632337
+{txt}{space 6}failedbid {c |}{col 17}{res}{space 2}-.6510768{col 29}{space 2}  .221116{col 40}{space 1}   -2.94{col 49}{space 3}0.003{col 57}{space 4}-1.085208{col 70}{space 3}-.2169457
+{txt}{space 4}numathletes {c |}{col 17}{res}{space 2}  .010427{col 29}{space 2} .0030595{col 40}{space 1}    3.41{col 49}{space 3}0.001{col 57}{space 4} .0044201{col 70}{space 3}  .016434
+{txt}{space 2}medallastfour {c |}{col 17}{res}{space 2}  .818112{col 29}{space 2} .0205527{col 40}{space 1}   39.81{col 49}{space 3}0.000{col 57}{space 4} .7777596{col 70}{space 3} .8584644
+{txt}{space 11}asia {c |}{col 17}{res}{space 2} .8563723{col 29}{space 2} .4648359{col 40}{space 1}    1.84{col 49}{space 3}0.066{col 57}{space 4}-.0562696{col 70}{space 3} 1.769014
+{txt}{space 9}africa {c |}{col 17}{res}{space 2} .3416881{col 29}{space 2} .4384575{col 40}{space 1}    0.78{col 49}{space 3}0.436{col 57}{space 4}-.5191635{col 70}{space 3}  1.20254
+{txt}{space 3}northamerica {c |}{col 17}{res}{space 2} .5616713{col 29}{space 2} .4924416{col 40}{space 1}    1.14{col 49}{space 3}0.254{col 57}{space 4}-.4051706{col 70}{space 3} 1.528513
+{txt}{space 9}europe {c |}{col 17}{res}{space 2}-.7504699{col 29}{space 2} .4818345{col 40}{space 1}   -1.56{col 49}{space 3}0.120{col 57}{space 4}-1.696486{col 70}{space 3} .1955463
+{txt}{space 3}southamerica {c |}{col 17}{res}{space 2}-.1854534{col 29}{space 2} .5989708{col 40}{space 1}   -0.31{col 49}{space 3}0.757{col 57}{space 4}-1.361451{col 70}{space 3} .9905441
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}-.1035019{col 29}{space 2} .4800059{col 40}{space 1}   -0.22{col 49}{space 3}0.829{col 57}{space 4}-1.045928{col 70}{space 3} .8389242
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. import excel "C:\Users\almon\OneDrive\Desktop\ECO 390\Project Proposal\ECO 390 Project.xlsx", sheet("Main") firstrow clear
+{res}{text}(22 vars, 717 obs)
+
+{com}. destring numathletes, replace
+{txt}numathletes: all characters numeric; {res}replaced {txt}as {res}int
+{txt}(1 missing value generated)
+{res}
+{com}. sum
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 5}Country {c |}{res}          0
+{txt}{space 8}Year {c |}{res}        716    2015.006    5.915486       2008       2024
+{txt}{space 2}medalcount {c |}{res}        716    5.296089    14.28468          0        126
+{txt}{space 6}gnippp {c |}{res}        716    16.71994    19.09643        .46     152.93
+{txt}{space 6}gdpppp {c |}{res}        716    17.20408    20.01232   .4740153   163.5428
+{txt}{hline 13}{c +}{hline 57}
+{space 2}population {c |}{res}        716    38.06982    141.5762    .009791     1411.1
+{txt}{space 3}urbpoppct {c |}{res}        716    55.98212    22.90374      9.139        100
+{txt}healthexpe~p {c |}{res}        716     11.7338    15.47988   .2054935   117.5842
+{txt}{space 5}hostnow {c |}{res}        716    .0055866    .0745865          0          1
+{txt}{space 2}hostinfour {c |}{res}        716    .0055866    .0745865          0          1
+{txt}{hline 13}{c +}{hline 57}
+hostlastfour {c |}{res}        716    .0055866    .0745865          0          1
+{txt}{space 3}timeshost {c |}{res}        716    .1424581    .4982056          0          4
+{txt}{space 3}failedbid {c |}{res}        716    .1815642    .6306802          0          5
+{txt}{space 1}numathletes {c |}{res}        716    58.21229    103.1498          1        619
+{txt}medallastf~r {c |}{res}        716    5.132682     13.9063          0        113
+{txt}{hline 13}{c +}{hline 57}
+{space 8}asia {c |}{res}        716    .2458101    .4308674          0          1
+{txt}{space 6}africa {c |}{res}        716    .2765363    .4475978          0          1
+{txt}northamerica {c |}{res}        716     .122905    .3285577          0          1
+{txt}{space 6}europe {c |}{res}        716    .2150838    .4111677          0          1
+{txt}southamerica {c |}{res}        716    .0614525    .2403264          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 5}oceania {c |}{res}        716    .0782123    .2686931          0          1
+{txt}{space 3}govsystem {c |}{res}          0
+
+{com}. reg medalcount gnippp population urbpoppct healthexpendppp hostnow hostinfour hostlastfour timeshost failedbid numathletes medallastfour asia africa northamerica europe southamerica
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       716
+{txt}{hline 13}{c +}{hline 34}   F(16, 699)      = {res}  1076.13
+{txt}       Model {c |} {res} 140205.308        16  8762.83174   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 5691.92122       699  8.14294882   {txt}R-squared       ={res}    0.9610
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9601
+{txt}       Total {c |} {res} 145897.229       715  204.052069   {txt}Root MSE        =   {res} 2.8536
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     medalcount{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}gnippp {c |}{col 17}{res}{space 2}-.0151902{col 29}{space 2} .0112163{col 40}{space 1}   -1.35{col 49}{space 3}0.176{col 57}{space 4}-.0372119{col 70}{space 3} .0068315
+{txt}{space 5}population {c |}{col 17}{res}{space 2} .0023382{col 29}{space 2}   .00096{col 40}{space 1}    2.44{col 49}{space 3}0.015{col 57}{space 4} .0004534{col 70}{space 3} .0042231
+{txt}{space 6}urbpoppct {c |}{col 17}{res}{space 2}-.0061237{col 29}{space 2}  .006622{col 40}{space 1}   -0.92{col 49}{space 3}0.355{col 57}{space 4}-.0191251{col 70}{space 3} .0068777
+{txt}healthexpendppp {c |}{col 17}{res}{space 2} .0419771{col 29}{space 2} .0157801{col 40}{space 1}    2.66{col 49}{space 3}0.008{col 57}{space 4} .0109949{col 70}{space 3} .0729592
+{txt}{space 8}hostnow {c |}{col 17}{res}{space 2} 20.22254{col 29}{space 2} 1.657479{col 40}{space 1}   12.20{col 49}{space 3}0.000{col 57}{space 4} 16.96831{col 70}{space 3} 23.47678
+{txt}{space 5}hostinfour {c |}{col 17}{res}{space 2} 9.405838{col 29}{space 2} 1.513194{col 40}{space 1}    6.22{col 49}{space 3}0.000{col 57}{space 4} 6.434889{col 70}{space 3} 12.37679
+{txt}{space 3}hostlastfour {c |}{col 17}{res}{space 2}-5.834023{col 29}{space 2} 1.527912{col 40}{space 1}   -3.82{col 49}{space 3}0.000{col 57}{space 4} -8.83387{col 70}{space 3}-2.834177
+{txt}{space 6}timeshost {c |}{col 17}{res}{space 2} 2.757301{col 29}{space 2} .4456818{col 40}{space 1}    6.19{col 49}{space 3}0.000{col 57}{space 4} 1.882266{col 70}{space 3} 3.632337
+{txt}{space 6}failedbid {c |}{col 17}{res}{space 2}-.6510768{col 29}{space 2}  .221116{col 40}{space 1}   -2.94{col 49}{space 3}0.003{col 57}{space 4}-1.085208{col 70}{space 3}-.2169457
+{txt}{space 4}numathletes {c |}{col 17}{res}{space 2}  .010427{col 29}{space 2} .0030595{col 40}{space 1}    3.41{col 49}{space 3}0.001{col 57}{space 4} .0044201{col 70}{space 3}  .016434
+{txt}{space 2}medallastfour {c |}{col 17}{res}{space 2}  .818112{col 29}{space 2} .0205527{col 40}{space 1}   39.81{col 49}{space 3}0.000{col 57}{space 4} .7777596{col 70}{space 3} .8584644
+{txt}{space 11}asia {c |}{col 17}{res}{space 2} .8563723{col 29}{space 2} .4648359{col 40}{space 1}    1.84{col 49}{space 3}0.066{col 57}{space 4}-.0562696{col 70}{space 3} 1.769014
+{txt}{space 9}africa {c |}{col 17}{res}{space 2} .3416881{col 29}{space 2} .4384575{col 40}{space 1}    0.78{col 49}{space 3}0.436{col 57}{space 4}-.5191635{col 70}{space 3}  1.20254
+{txt}{space 3}northamerica {c |}{col 17}{res}{space 2} .5616713{col 29}{space 2} .4924416{col 40}{space 1}    1.14{col 49}{space 3}0.254{col 57}{space 4}-.4051706{col 70}{space 3} 1.528513
+{txt}{space 9}europe {c |}{col 17}{res}{space 2}-.7504699{col 29}{space 2} .4818345{col 40}{space 1}   -1.56{col 49}{space 3}0.120{col 57}{space 4}-1.696486{col 70}{space 3} .1955463
+{txt}{space 3}southamerica {c |}{col 17}{res}{space 2}-.1854534{col 29}{space 2} .5989708{col 40}{space 1}   -0.31{col 49}{space 3}0.757{col 57}{space 4}-1.361451{col 70}{space 3} .9905441
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}-.1035019{col 29}{space 2} .4800059{col 40}{space 1}   -0.22{col 49}{space 3}0.829{col 57}{space 4}-1.045928{col 70}{space 3} .8389242
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. estat ic
+
+{txt}Akaike's information criterion and Bayesian information criterion
+
+{hline 13}{c TT}{hline 63}
+       Model {c |}          N   ll(null)  ll(model)      df        AIC        BIC
+{hline 13}{c +}{hline 63}
+{ralign 12:.}{col 14}{c |}{res}{col 16}       716{col 28}-2919.438{col 39}-1758.138{col 50}    17{col 58} 3550.276{col 69} 3628.029
+{txt}{hline 13}{c BT}{hline 63}
+{p 0 6 0 77}Note: BIC uses N = number of observations. See {helpb bic_note:{bind:[R] IC note}}.{p_end}
+
+{com}. reg medalcount gdpppp population urbpoppct healthexpendppp hostnow hostinfour hostlastfour timeshost failedbid numathletes medallastfour asia africa northamerica europe southamerica
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       716
+{txt}{hline 13}{c +}{hline 34}   F(16, 699)      = {res}  1075.77
+{txt}       Model {c |} {res} 140203.485        16  8762.71779   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 5693.74435       699  8.14555701   {txt}R-squared       ={res}    0.9610
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9601
+{txt}       Total {c |} {res} 145897.229       715  204.052069   {txt}Root MSE        =   {res}  2.854
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     medalcount{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}gdpppp {c |}{col 17}{res}{space 2}-.0133853{col 29}{space 2}   .01055{col 40}{space 1}   -1.27{col 49}{space 3}0.205{col 57}{space 4}-.0340988{col 70}{space 3} .0073283
+{txt}{space 5}population {c |}{col 17}{res}{space 2} .0023485{col 29}{space 2}   .00096{col 40}{space 1}    2.45{col 49}{space 3}0.015{col 57}{space 4} .0004637{col 70}{space 3} .0042332
+{txt}{space 6}urbpoppct {c |}{col 17}{res}{space 2}-.0064626{col 29}{space 2} .0065852{col 40}{space 1}   -0.98{col 49}{space 3}0.327{col 57}{space 4}-.0193917{col 70}{space 3} .0064664
+{txt}healthexpendppp {c |}{col 17}{res}{space 2} .0412378{col 29}{space 2} .0158927{col 40}{space 1}    2.59{col 49}{space 3}0.010{col 57}{space 4} .0100346{col 70}{space 3}  .072441
+{txt}{space 8}hostnow {c |}{col 17}{res}{space 2} 20.22274{col 29}{space 2} 1.657861{col 40}{space 1}   12.20{col 49}{space 3}0.000{col 57}{space 4} 16.96775{col 70}{space 3} 23.47772
+{txt}{space 5}hostinfour {c |}{col 17}{res}{space 2} 9.408857{col 29}{space 2} 1.513827{col 40}{space 1}    6.22{col 49}{space 3}0.000{col 57}{space 4} 6.436665{col 70}{space 3} 12.38105
+{txt}{space 3}hostlastfour {c |}{col 17}{res}{space 2}-5.834038{col 29}{space 2} 1.528205{col 40}{space 1}   -3.82{col 49}{space 3}0.000{col 57}{space 4}-8.834461{col 70}{space 3}-2.833616
+{txt}{space 6}timeshost {c |}{col 17}{res}{space 2} 2.744675{col 29}{space 2}  .447631{col 40}{space 1}    6.13{col 49}{space 3}0.000{col 57}{space 4} 1.865812{col 70}{space 3} 3.623537
+{txt}{space 6}failedbid {c |}{col 17}{res}{space 2}-.6532585{col 29}{space 2} .2211043{col 40}{space 1}   -2.95{col 49}{space 3}0.003{col 57}{space 4}-1.087367{col 70}{space 3}-.2191503
+{txt}{space 4}numathletes {c |}{col 17}{res}{space 2} .0104172{col 29}{space 2} .0030615{col 40}{space 1}    3.40{col 49}{space 3}0.001{col 57}{space 4} .0044063{col 70}{space 3}  .016428
+{txt}{space 2}medallastfour {c |}{col 17}{res}{space 2} .8183524{col 29}{space 2}   .02056{col 40}{space 1}   39.80{col 49}{space 3}0.000{col 57}{space 4} .7779857{col 70}{space 3} .8587191
+{txt}{space 11}asia {c |}{col 17}{res}{space 2} .8430609{col 29}{space 2} .4641295{col 40}{space 1}    1.82{col 49}{space 3}0.070{col 57}{space 4} -.068194{col 70}{space 3} 1.754316
+{txt}{space 9}africa {c |}{col 17}{res}{space 2} .3480927{col 29}{space 2}  .438869{col 40}{space 1}    0.79{col 49}{space 3}0.428{col 57}{space 4}-.5135668{col 70}{space 3} 1.209752
+{txt}{space 3}northamerica {c |}{col 17}{res}{space 2} .5652524{col 29}{space 2} .4927032{col 40}{space 1}    1.15{col 49}{space 3}0.252{col 57}{space 4}-.4021031{col 70}{space 3} 1.532608
+{txt}{space 9}europe {c |}{col 17}{res}{space 2}-.7486153{col 29}{space 2} .4819309{col 40}{space 1}   -1.55{col 49}{space 3}0.121{col 57}{space 4}-1.694821{col 70}{space 3} .1975903
+{txt}{space 3}southamerica {c |}{col 17}{res}{space 2}-.1730489{col 29}{space 2} .5987001{col 40}{space 1}   -0.29{col 49}{space 3}0.773{col 57}{space 4}-1.348515{col 70}{space 3} 1.002417
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}-.0985253{col 29}{space 2} .4804444{col 40}{space 1}   -0.21{col 49}{space 3}0.838{col 57}{space 4}-1.041812{col 70}{space 3} .8447617
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. estat ic
+
+{txt}Akaike's information criterion and Bayesian information criterion
+
+{hline 13}{c TT}{hline 63}
+       Model {c |}          N   ll(null)  ll(model)      df        AIC        BIC
+{hline 13}{c +}{hline 63}
+{ralign 12:.}{col 14}{c |}{res}{col 16}       716{col 28}-2919.438{col 39}-1758.253{col 50}    17{col 58} 3550.505{col 69} 3628.258
+{txt}{hline 13}{c BT}{hline 63}
+{p 0 6 0 77}Note: BIC uses N = number of observations. See {helpb bic_note:{bind:[R] IC note}}.{p_end}
+
+{com}. label medalcount ["Number of medals won"]
+{err}invalid syntax
+{txt}{search r(198), local:r(198);}
+
+{com}. label var medalcount ["Number of medals won"]
+{err}invalid syntax
+{txt}{search r(198), local:r(198);}
+
+{com}. label var medalcount "Number of medals won"
+
+. label var gnippp "GNI per capita, in thousands"
+
+. label var gdpppp "GDP per capita, in thousands"
+
+. label var population "Total population, in millions"
+
+. label var gnippp "GNI per capita, in thousands dollars"
+
+. label var gdpppp "GDP per capita, in thousands dollars"
+
+. label var urbpoppct "% of urban population"
+
+. label var healthexpendppp "Health expenditure per capita, in hundreds or dollars"
+
+. label var healthexpendppp "Health expenditure per capita, in hundreds of dollars"
+
+. label var numathletes "Number of athletes representing country i at the Games"
+
+. label var govsystem "System of Government"
+
+. save "C:\Users\almon\OneDrive\Desktop\ECO 390\Project Proposal\AlmonaDPrelimData.dta"
+{txt}{p 0 4 2}
+file {bf}
+C:\Users\almon\OneDrive\Desktop\ECO 390\Project Proposal\AlmonaDPrelimData.dta{rm}
+saved
+{p_end}
+
+{com}. exit, clear
